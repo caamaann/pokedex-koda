@@ -25,7 +25,7 @@ export default function Pagination({
       const startPage = Math.max(2, currentPage - sideButtons);
       const endPage = Math.min(totalPages - 1, currentPage + sideButtons);
 
-      pageNumbers.push(1); // Always show the first page
+      pageNumbers.push(1);
 
       if (startPage > 2) {
         pageNumbers.push("...");
@@ -39,7 +39,7 @@ export default function Pagination({
         pageNumbers.push("...");
       }
 
-      pageNumbers.push(totalPages); // Always show the last page
+      pageNumbers.push(totalPages);
     }
 
     return pageNumbers.map((number, index) =>
